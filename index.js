@@ -1,115 +1,69 @@
 var alunos = [
   {
-    nome: "Amanda",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "desistiu"
-  },
-  {
     nome: "Breno",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "Grande fã de um tal de Flávio.",
+    imagem: "imagens/breno.jpg",
+    site: "https://breno-carlini-portifolio.netlify.app"
   },
   {
     nome: "Camille",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "desistiu"
+    descricao: "Minha internet tá uma #@$%!",
+    imagem: "imagens/not_found.jpg",
+    site: ""
   },
   {
     nome: "Douglas",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
-  },
-  {
-    nome: "Felipe",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "desistiu"
-  },
-  {
-    nome: "Guilherme",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "O garoto da chamada.",
+    imagem: "imagens/not_found.jpg",
+    site: ""
   },
   {
     nome: "Gustavo",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
-  },
-  {
-    nome: "Iorrana",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "desistiu"
+    descricao: "Fiscal de treino da turma.",
+    imagem: "imagens/gustavo.jpg",
+    site: "https://gustavowaki.netlify.app"
   },
   {
     nome: "Lucca",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "Só agradece!",
+    imagem: "imagens/lucca.jpg",
+    site: "https://lucca-sabino.netlify.app"
   },
   {
     nome: "Matheus",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "Tem foto, mas na real não sabemos quem é.",
+    imagem: "imagens/matheus.jpg",
+    site: ""
   },
   {
     nome: "Nathália",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "Ta sempre quietinha.",
+    imagem: "imagens/nathalia.jpg",
+    site: "https://nathalia-ramos.netlify.app"
   },
   {
     nome: "Nicolas",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "Conhece a banda Shaman?",
+    imagem: "imagens/nicolas.jpg",
+    site: "https://fichadonicolas.netlify.app"
   },
   {
     nome: "Pedro",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "desistiu"
-  },
-  {
-    nome: "Stephanie",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "desistiu"
+    descricao: "Pedro? Little? Cê tá ai?",
+    imagem: "imagens/not_found.jpg",
+    site: ""
   },
   {
     nome: "Vitória",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "A grande defensora do frango.",
+    imagem: "imagens/vitoria.jpg",
+    site: ""
   },
   {
     nome: "Yuri",
-    descricao: "",
-    imagem: "",
-    site: "",
-    status: "aprovado"
+    descricao: "Grande conhecedor de shoppings.",
+    imagem: "imagens/yuri.jpg",
+    site: "https://yuribatista.netlify.app"
   }
 ]
 
@@ -127,6 +81,14 @@ alunos.forEach((aluno) => {
 
   var description = card.querySelector(".mdl-card__supporting-text");
   description.innerText = aluno.descricao;
+
+  var button = card.querySelector(".mdl-button")
+
+  if (aluno.site !== "") {
+    button.href = aluno.site;
+  } else {
+    button.classList.add("disabled");
+  }
 
   main.appendChild(card);
 });

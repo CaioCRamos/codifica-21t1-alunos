@@ -19,4 +19,14 @@ main {
 
 .mdl-card__media {
   text-align: center;
+  background-color: lightblue;
+}
+
+.mdl-card__media img {
+  border-radius: 50%;
+}
+
+.disabled {
+  text-decoration: line-through;
+  pointer-events: none;
 }
